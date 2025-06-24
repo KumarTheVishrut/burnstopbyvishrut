@@ -1,0 +1,450 @@
+---
+---
+
+<section class="section" id="deployment">
+  <div class="container">
+    <h2 class="section-title">Deploy in <span class="title-accent">Minutes</span></h2>
+    <p class="section-subtitle">
+      Get BurnStop running on your infrastructure with our simple Docker setup. No complex configuration required.
+    </p>
+
+    <div class="deployment-grid">
+      <div class="deployment-steps">
+        <div class="step-item">
+          <div class="step-number">1</div>
+          <div class="step-content">
+            <h3 class="step-title">Clone Repository</h3>
+            <p class="step-description">Get the latest version of BurnStop from GitHub</p>
+            <div class="code-block">
+              <pre><code>git clone https://github.com/KumarTheVishrut/burn-stop.git
+cd burn-stop</code></pre>
+              <button class="copy-btn" onclick="copyCode(this)">📋</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="step-item">
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <h3 class="step-title">Start with Docker</h3>
+            <p class="step-description">Launch all services with a single command</p>
+            <div class="code-block">
+              <pre><code>docker-compose up --build -d</code></pre>
+              <button class="copy-btn" onclick="copyCode(this)">📋</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="step-item">
+          <div class="step-number">3</div>
+          <div class="step-content">
+            <h3 class="step-title">Access Dashboard</h3>
+            <p class="step-description">Open your browser and start tracking costs</p>
+            <div class="code-block">
+              <pre><code>open http://localhost:3000</code></pre>
+              <button class="copy-btn" onclick="copyCode(this)">📋</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="deployment-info">
+        <div class="info-card">
+          <div class="info-header">
+            <span class="info-icon">🐳</span>
+            <h3>Docker Services</h3>
+          </div>
+          <div class="services-list">
+            <div class="service-item">
+              <div class="service-indicator running"></div>
+              <div class="service-details">
+                <div class="service-name">Frontend (Next.js)</div>
+                <div class="service-port">http://localhost:3000</div>
+              </div>
+            </div>
+            <div class="service-item">
+              <div class="service-indicator running"></div>
+              <div class="service-details">
+                <div class="service-name">Backend (FastAPI)</div>
+                <div class="service-port">http://localhost:8000</div>
+              </div>
+            </div>
+            <div class="service-item">
+              <div class="service-indicator running"></div>
+              <div class="service-details">
+                <div class="service-name">Redis Cache</div>
+                <div class="service-port">Port 6379</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <div class="info-header">
+            <span class="info-icon">⚙️</span>
+            <h3>System Requirements</h3>
+          </div>
+          <div class="requirements-list">
+            <div class="requirement-item">
+              <span class="req-label">RAM:</span>
+              <span class="req-value">2GB minimum (4GB recommended)</span>
+            </div>
+            <div class="requirement-item">
+              <span class="req-label">Storage:</span>
+              <span class="req-value">10GB (SSD preferred)</span>
+            </div>
+            <div class="requirement-item">
+              <span class="req-label">Docker:</span>
+              <span class="req-value">Version 20.0+ & Docker Compose</span>
+            </div>
+            <div class="requirement-item">
+              <span class="req-label">OS:</span>
+              <span class="req-value">Ubuntu 20.04+ / Debian 11+ / CentOS 8+</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <div class="info-header">
+            <span class="info-icon">🔧</span>
+            <h3>Production Setup</h3>
+          </div>
+          <div class="production-features">
+            <div class="feature-item">
+              <span class="feature-check">✅</span>
+              <span>Automated SSL with Let's Encrypt</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-check">✅</span>
+              <span>Nginx reverse proxy configuration</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-check">✅</span>
+              <span>Environment-specific configurations</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-check">✅</span>
+              <span>Automated backups and monitoring</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="deployment-actions" id="get-started">
+      <div class="action-card">
+        <h3>Ready to Deploy?</h3>
+        <p>Start saving on your cloud costs today with BurnStop's powerful optimization platform.</p>
+        <div class="action-buttons">
+          <a href="https://github.com/KumarTheVishrut/burn-stop" target="_blank" class="btn btn-primary btn-large">
+            <span>🚀</span>
+            Get Started Now
+          </a>
+          <a href="https://github.com/KumarTheVishrut/burn-stop#readme" target="_blank" class="btn btn-secondary btn-large">
+            <span>📚</span>
+            View Full Documentation
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .section {
+    background: #0a0a0a;
+  }
+
+  .deployment-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    margin-top: 64px;
+    align-items: start;
+  }
+
+  .step-item {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 48px;
+    align-items: flex-start;
+  }
+
+  .step-number {
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, #f97316 0%, #dc2626 100%);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 20px;
+    flex-shrink: 0;
+  }
+
+  .step-content {
+    flex: 1;
+  }
+
+  .step-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 8px;
+  }
+
+  .step-description {
+    color: #9ca3af;
+    margin-bottom: 16px;
+    line-height: 1.5;
+  }
+
+  .code-block {
+    position: relative;
+    background: #1a1a1a;
+    border-radius: 12px;
+    padding: 20px;
+    overflow-x: auto;
+    border: 1px solid #374151;
+  }
+
+  .code-block pre {
+    margin: 0;
+    color: #e5e7eb;
+    font-family: 'Monaco', 'Menlo', monospace;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .code-block code {
+    background: none;
+    padding: 0;
+    border-radius: 0;
+  }
+
+  .copy-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.2s ease;
+  }
+
+  .copy-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+
+  .info-card {
+    background: #111111;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    border: 1px solid #1f2937;
+    margin-bottom: 24px;
+  }
+
+  .info-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+
+  .info-icon {
+    font-size: 24px;
+  }
+
+  .info-header h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+  }
+
+  .service-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 0;
+    border-bottom: 1px solid #374151;
+  }
+
+  .service-item:last-child {
+    border-bottom: none;
+  }
+
+  .service-indicator {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #10b981;
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+  }
+
+  .service-details {
+    flex: 1;
+  }
+
+  .service-name {
+    font-weight: 500;
+    color: #e5e7eb;
+    font-size: 14px;
+    margin-bottom: 2px;
+  }
+
+  .service-port {
+    color: #9ca3af;
+    font-size: 12px;
+  }
+
+  .requirement-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid #374151;
+  }
+
+  .requirement-item:last-child {
+    border-bottom: none;
+  }
+
+  .req-label {
+    font-weight: 500;
+    color: #e5e7eb;
+    font-size: 14px;
+  }
+
+  .req-value {
+    color: #9ca3af;
+    font-size: 14px;
+  }
+
+  .feature-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+    font-size: 14px;
+    color: #e5e7eb;
+  }
+
+  .feature-item:last-child {
+    margin-bottom: 0;
+  }
+
+  .feature-check {
+    color: #10b981;
+    font-size: 16px;
+  }
+
+  .deployment-actions {
+    margin-top: 80px;
+  }
+
+  .action-card {
+    background: linear-gradient(135deg, #f97316 0%, #dc2626 100%);
+    color: white;
+    border-radius: 24px;
+    padding: 48px;
+    text-align: center;
+  }
+
+  .action-card h3 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+
+  .action-card p {
+    font-size: 18px;
+    opacity: 0.9;
+    margin-bottom: 32px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .action-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+  }
+
+  .action-buttons .btn-secondary {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+
+  .action-buttons .btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+
+  .title-accent {
+    background: linear-gradient(135deg, #f97316 0%, #dc2626 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  @media (max-width: 768px) {
+    .deployment-grid {
+      grid-template-columns: 1fr;
+      gap: 48px;
+    }
+
+    .step-item {
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+
+    .step-number {
+      width: 40px;
+      height: 40px;
+      font-size: 16px;
+    }
+
+    .step-title {
+      font-size: 20px;
+    }
+
+    .action-card {
+      padding: 32px 24px;
+    }
+
+    .action-card h3 {
+      font-size: 24px;
+    }
+
+    .action-buttons {
+      flex-direction: column;
+    }
+  }
+</style>
+
+<script>
+  function copyCode(button) {
+    const codeBlock = button.previousElementSibling;
+    const code = codeBlock.textContent;
+    
+    navigator.clipboard.writeText(code).then(() => {
+      button.textContent = '✅';
+      setTimeout(() => {
+        button.textContent = '📋';
+      }, 2000);
+    });
+  }
+</script>

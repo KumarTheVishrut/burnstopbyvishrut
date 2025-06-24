@@ -1,0 +1,135 @@
+---
+---
+
+<header class="header">
+  <nav class="nav">
+    <div class="container">
+      <div class="nav-content">
+        <div class="nav-brand">
+          <span class="nav-logo">🔥❌</span>
+          <span class="nav-title">BurnStop</span>
+        </div>
+        
+        <div class="nav-menu">
+          <a href="#features" class="nav-link">Features</a>
+          <a href="#tech" class="nav-link">Technology</a>
+          <a href="#deployment" class="nav-link">Deploy</a>
+          <a href="https://github.com/KumarTheVishrut/burn-stop" target="_blank" class="nav-link">GitHub</a>
+        </div>
+
+        <div class="nav-actions">
+          <a href="#get-started" class="btn btn-primary">Get Started</a>
+        </div>
+
+        <button class="mobile-menu-btn" id="mobile-menu-btn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<style>
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: rgba(10, 10, 10, 0.95);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(55, 65, 81, 0.3);
+  }
+
+  .nav {
+    padding: 0;
+  }
+
+  .nav-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 72px;
+  }
+
+  .nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 700;
+    font-size: 24px;
+    color: #ffffff;
+  }
+
+  .nav-logo {
+    font-size: 32px;
+  }
+
+  .nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+
+  .nav-link {
+    color: #d1d5db;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+  }
+
+  .nav-link:hover {
+    color: #f97316;
+  }
+
+  .nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .mobile-menu-btn {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+  }
+
+  .mobile-menu-btn span {
+    width: 24px;
+    height: 2px;
+    background: #e5e7eb;
+    transition: all 0.3s ease;
+  }
+
+  @media (max-width: 768px) {
+    .nav-menu {
+      display: none;
+    }
+
+    .mobile-menu-btn {
+      display: flex;
+    }
+
+    .nav-actions .btn {
+      display: none;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    if (mobileMenuBtn) {
+      mobileMenuBtn.addEventListener('click', function() {
+        // Mobile menu functionality can be implemented here
+        console.log('Mobile menu clicked');
+      });
+    }
+  });
+</script>

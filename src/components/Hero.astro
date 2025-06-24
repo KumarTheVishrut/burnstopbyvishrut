@@ -1,0 +1,406 @@
+---
+---
+
+<section class="hero">
+  <div class="hero-background">
+    <div class="hero-gradient"></div>
+    <div class="hero-pattern"></div>
+  </div>
+  
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-icon">🚀</span>
+        <span>Self-Hosted • AI-Powered • Open Source</span>
+      </div>
+      
+      <h1 class="hero-title">
+        Stop <span class="title-accent">Burning Money</span><br>
+        on Forgotten Cloud Services
+      </h1>
+      
+      <p class="hero-description">
+        BurnStop is the ultimate self-hosted platform for tracking, analyzing, and optimizing your startup's cloud infrastructure costs across AWS, GCP, Azure, and beyond. Get AI-powered insights and never overspend again.
+      </p>
+      
+      <div class="hero-actions">
+        <a href="#get-started" class="btn btn-primary btn-large">
+          <span>🐳</span>
+          Start with Docker
+        </a>
+        <a href="https://github.com/KumarTheVishrut/burn-stop" target="_blank" class="btn btn-secondary btn-large">
+          <span>⭐</span>
+          View on GitHub
+        </a>
+      </div>
+      
+      <div class="hero-stats">
+        <div class="stat">
+          <div class="stat-number">100%</div>
+          <div class="stat-label">Self-Hosted</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">AI</div>
+          <div class="stat-label">Powered</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">Multi</div>
+          <div class="stat-label">Platform</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="hero-visual">
+      <div class="dashboard-mockup">
+        <div class="mockup-header">
+          <div class="mockup-dots">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="mockup-title">BurnStop Dashboard</div>
+        </div>
+        <div class="mockup-content">
+          <div class="mockup-metric">
+            <div class="metric-label">Monthly Spend</div>
+            <div class="metric-value">$2,847</div>
+            <div class="metric-change positive">↓ 23% from last month</div>
+          </div>
+          <div class="mockup-chart">
+            <div class="chart-bars">
+              <div class="bar" style="height: 60%"></div>
+              <div class="bar" style="height: 80%"></div>
+              <div class="bar" style="height: 45%"></div>
+              <div class="bar" style="height: 70%"></div>
+              <div class="bar" style="height: 35%"></div>
+              <div class="bar" style="height: 55%"></div>
+            </div>
+          </div>
+          <div class="mockup-services">
+            <div class="service-item">
+              <span class="service-icon aws">AWS</span>
+              <span class="service-name">EC2 Instances</span>
+              <span class="service-cost">$1,240</span>
+            </div>
+            <div class="service-item">
+              <span class="service-icon gcp">GCP</span>
+              <span class="service-name">Cloud Run</span>
+              <span class="service-cost">$580</span>
+            </div>
+            <div class="service-item">
+              <span class="service-icon azure">Azure</span>
+              <span class="service-name">App Service</span>
+              <span class="service-cost">$320</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    padding-top: 72px;
+  }
+
+  .hero-background {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+  }
+
+  .hero-gradient {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, #0a0a0a 0%, #111111 50%, #1a1a1a 100%);
+  }
+
+  .hero-pattern {
+    position: absolute;
+    inset: 0;
+    opacity: 0.1;
+    background-image: radial-gradient(circle at 1px 1px, #f97316 1px, transparent 0);
+    background-size: 40px 40px;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(249, 115, 22, 0.1);
+    color: #f97316;
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 24px;
+    border: 1px solid rgba(249, 115, 22, 0.2);
+  }
+
+  .badge-icon {
+    font-size: 16px;
+  }
+
+  .hero-title {
+    font-size: 56px;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 24px;
+    color: #ffffff;
+  }
+
+  .title-accent {
+    background: linear-gradient(135deg, #f97316 0%, #dc2626 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .hero-description {
+    font-size: 20px;
+    color: #9ca3af;
+    margin-bottom: 40px;
+    line-height: 1.6;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 48px;
+  }
+
+  .btn-large {
+    padding: 16px 32px;
+    font-size: 18px;
+  }
+
+  .hero-stats {
+    display: flex;
+    gap: 48px;
+  }
+
+  .stat {
+    text-align: center;
+  }
+
+  .stat-number {
+    font-size: 32px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 4px;
+  }
+
+  .stat-label {
+    font-size: 14px;
+    color: #9ca3af;
+    font-weight: 500;
+  }
+
+  .hero-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .dashboard-mockup {
+    background: #111111;
+    border-radius: 20px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    width: 100%;
+    max-width: 500px;
+    transform: rotate(5deg);
+    animation: float 6s ease-in-out infinite;
+    border: 1px solid #1f2937;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: rotate(5deg) translateY(0px); }
+    50% { transform: rotate(5deg) translateY(-10px); }
+  }
+
+  .mockup-header {
+    background: #1a1a1a;
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-bottom: 1px solid #374151;
+  }
+
+  .mockup-dots {
+    display: flex;
+    gap: 6px;
+  }
+
+  .mockup-dots span {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #dc2626;
+  }
+
+  .mockup-dots span:nth-child(2) {
+    background: #f59e0b;
+  }
+
+  .mockup-dots span:nth-child(3) {
+    background: #10b981;
+  }
+
+  .mockup-title {
+    font-weight: 600;
+    color: #e5e7eb;
+    font-size: 14px;
+  }
+
+  .mockup-content {
+    padding: 24px;
+  }
+
+  .mockup-metric {
+    margin-bottom: 24px;
+  }
+
+  .metric-label {
+    font-size: 14px;
+    color: #9ca3af;
+    margin-bottom: 4px;
+  }
+
+  .metric-value {
+    font-size: 32px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 4px;
+  }
+
+  .metric-change {
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .metric-change.positive {
+    color: #10b981;
+  }
+
+  .mockup-chart {
+    margin-bottom: 24px;
+    padding: 16px;
+    background: #1a1a1a;
+    border-radius: 12px;
+  }
+
+  .chart-bars {
+    display: flex;
+    align-items: end;
+    gap: 8px;
+    height: 80px;
+  }
+
+  .bar {
+    flex: 1;
+    background: linear-gradient(135deg, #f97316 0%, #dc2626 100%);
+    border-radius: 4px 4px 0 0;
+    min-height: 20px;
+    animation: grow 2s ease-out;
+  }
+
+  @keyframes grow {
+    from { height: 0; }
+  }
+
+  .mockup-services {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .service-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px;
+    border-radius: 8px;
+    background: #1a1a1a;
+  }
+
+  .service-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 12px;
+    color: white;
+  }
+
+  .service-icon.aws {
+    background: #ff9900;
+  }
+
+  .service-icon.gcp {
+    background: #4285f4;
+  }
+
+  .service-icon.azure {
+    background: #0078d4;
+  }
+
+  .service-name {
+    flex: 1;
+    font-weight: 500;
+    color: #e5e7eb;
+    font-size: 14px;
+  }
+
+  .service-cost {
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 14px;
+  }
+
+  @media (max-width: 768px) {
+    .container {
+      grid-template-columns: 1fr;
+      gap: 48px;
+    }
+
+    .hero-title {
+      font-size: 40px;
+    }
+
+    .hero-description {
+      font-size: 18px;
+    }
+
+    .hero-actions {
+      flex-direction: column;
+    }
+
+    .hero-stats {
+      justify-content: center;
+      gap: 32px;
+    }
+
+    .dashboard-mockup {
+      max-width: 400px;
+      transform: rotate(0deg);
+    }
+  }
+</style>

@@ -1,0 +1,376 @@
+---
+---
+
+<section class="section benefits-section" id="benefits">
+  <div class="container">
+    <div class="benefits-content">
+      <div class="benefits-text">
+        <h2 class="section-title">Why Choose <span class="title-accent">BurnStop?</span></h2>
+        <p class="section-subtitle">
+          Join hundreds of startups saving thousands of dollars monthly on cloud infrastructure costs with intelligent optimization and monitoring.
+        </p>
+
+        <div class="benefits-list">
+          <div class="benefit-item">
+            <div class="benefit-icon">💰</div>
+            <div class="benefit-content">
+              <h3 class="benefit-title">Save Up to 90% on Cloud Costs</h3>
+              <p class="benefit-description">
+                Identify unused resources, optimize instance sizes, and eliminate forgotten services with AI-powered recommendations.
+              </p>
+            </div>
+          </div>
+
+          <div class="benefit-item">
+            <div class="benefit-icon">🚀</div>
+            <div class="benefit-content">
+              <h3 class="benefit-title">5-Minute Setup with Docker</h3>
+              <p class="benefit-description">
+                Get started instantly with our one-command Docker deployment. No complex configuration or lengthy setup processes.
+              </p>
+            </div>
+          </div>
+
+          <div class="benefit-item">
+            <div class="benefit-icon">🔒</div>
+            <div class="benefit-content">
+              <h3 class="benefit-title">100% Self-Hosted & Secure</h3>
+              <p class="benefit-description">
+                Your sensitive financial data never leaves your servers. Full control, complete privacy, enterprise-grade security.
+              </p>
+            </div>
+          </div>
+
+          <div class="benefit-item">
+            <div class="benefit-icon">🤖</div>
+            <div class="benefit-content">
+              <h3 class="benefit-title">AI-Powered Cost Intelligence</h3>
+              <p class="benefit-description">
+                Machine learning algorithms analyze your spending patterns and provide actionable optimization insights automatically.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="benefits-actions">
+          <a href="#get-started" class="btn btn-primary btn-large">
+            <span>🐳</span>
+            Deploy with Docker
+          </a>
+          <a href="https://github.com/KumarTheVishrut/burn-stop" target="_blank" class="btn btn-secondary btn-large">
+            <span>📖</span>
+            View Documentation
+          </a>
+        </div>
+      </div>
+
+      <div class="benefits-visual">
+        <div class="savings-card">
+          <div class="card-header">
+            <h3>Monthly Savings Report</h3>
+            <span class="report-badge">AI Generated</span>
+          </div>
+          
+          <div class="savings-metric">
+            <div class="metric-value">$2,340</div>
+            <div class="metric-label">Saved This Month</div>
+            <div class="metric-change">↗️ 45% increase</div>
+          </div>
+
+          <div class="savings-breakdown">
+            <div class="breakdown-item">
+              <div class="breakdown-icon aws">AWS</div>
+              <div class="breakdown-details">
+                <div class="breakdown-name">EC2 Optimization</div>
+                <div class="breakdown-savings">$1,240 saved</div>
+              </div>
+            </div>
+            
+            <div class="breakdown-item">
+              <div class="breakdown-icon gcp">GCP</div>
+              <div class="breakdown-details">
+                <div class="breakdown-name">Unused Storage</div>
+                <div class="breakdown-savings">$680 saved</div>
+              </div>
+            </div>
+            
+            <div class="breakdown-item">
+              <div class="breakdown-icon azure">Azure</div>
+              <div class="breakdown-details">
+                <div class="breakdown-name">Reserved Instances</div>
+                <div class="breakdown-savings">$420 saved</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="ai-recommendations">
+            <h4>🤖 AI Recommendations</h4>
+            <div class="recommendation">
+              <span class="rec-icon">💡</span>
+              <span>Resize 3 oversized EC2 instances</span>
+            </div>
+            <div class="recommendation">
+              <span class="rec-icon">⚠️</span>
+              <span>Delete 2 unused RDS snapshots</span>
+            </div>
+            <div class="recommendation">
+              <span class="rec-icon">📊</span>
+              <span>Switch to reserved instances</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .benefits-section {
+    background: linear-gradient(135deg, #111111 0%, #1a1a1a 100%);
+  }
+
+  .benefits-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+
+  .benefits-list {
+    margin: 48px 0;
+  }
+
+  .benefit-item {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 32px;
+    align-items: flex-start;
+  }
+
+  .benefit-icon {
+    width: 48px;
+    height: 48px;
+    background: #1a1a1a;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    flex-shrink: 0;
+    border: 1px solid #374151;
+  }
+
+  .benefit-content {
+    flex: 1;
+  }
+
+  .benefit-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 8px;
+    line-height: 1.3;
+  }
+
+  .benefit-description {
+    color: #9ca3af;
+    line-height: 1.6;
+    font-size: 16px;
+  }
+
+  .benefits-actions {
+    display: flex;
+    gap: 16px;
+  }
+
+  .benefits-visual {
+    display: flex;
+    justify-content: center;
+  }
+
+  .savings-card {
+    background: #111111;
+    border-radius: 24px;
+    padding: 32px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 400px;
+    animation: float 6s ease-in-out infinite;
+    border: 1px solid #1f2937;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+
+  .card-header h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+  }
+
+  .report-badge {
+    background: linear-gradient(135deg, #f97316 0%, #dc2626 100%);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+  }
+
+  .savings-metric {
+    text-align: center;
+    margin-bottom: 32px;
+    padding: 24px;
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(5, 150, 105, 0.1) 100%);
+    border-radius: 16px;
+    border: 1px solid rgba(16, 185, 129, 0.2);
+  }
+
+  .metric-value {
+    font-size: 36px;
+    font-weight: 800;
+    color: #10b981;
+    margin-bottom: 4px;
+  }
+
+  .metric-label {
+    color: #9ca3af;
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+
+  .metric-change {
+    color: #10b981;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .savings-breakdown {
+    margin-bottom: 24px;
+  }
+
+  .breakdown-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 12px 0;
+    border-bottom: 1px solid #374151;
+  }
+
+  .breakdown-item:last-child {
+    border-bottom: none;
+  }
+
+  .breakdown-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 10px;
+    color: white;
+  }
+
+  .breakdown-icon.aws {
+    background: #ff9900;
+  }
+
+  .breakdown-icon.gcp {
+    background: #4285f4;
+  }
+
+  .breakdown-icon.azure {
+    background: #0078d4;
+  }
+
+  .breakdown-details {
+    flex: 1;
+  }
+
+  .breakdown-name {
+    font-weight: 500;
+    color: #e5e7eb;
+    font-size: 14px;
+    margin-bottom: 2px;
+  }
+
+  .breakdown-savings {
+    color: #10b981;
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  .ai-recommendations {
+    background: #1a1a1a;
+    border-radius: 12px;
+    padding: 16px;
+    border: 1px solid #374151;
+  }
+
+  .ai-recommendations h4 {
+    font-size: 14px;
+    font-weight: 600;
+    color: #e5e7eb;
+    margin-bottom: 12px;
+  }
+
+  .recommendation {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    color: #9ca3af;
+    margin-bottom: 8px;
+  }
+
+  .recommendation:last-child {
+    margin-bottom: 0;
+  }
+
+  .rec-icon {
+    font-size: 14px;
+  }
+
+  .title-accent {
+    background: linear-gradient(135deg, #f97316 0%, #dc2626 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  @media (max-width: 768px) {
+    .benefits-content {
+      grid-template-columns: 1fr;
+      gap: 48px;
+    }
+
+    .benefits-actions {
+      flex-direction: column;
+    }
+
+    .savings-card {
+      max-width: 350px;
+    }
+
+    .benefit-item {
+      gap: 16px;
+    }
+
+    .benefit-icon {
+      width: 40px;
+      height: 40px;
+    }
+  }
+</style>
