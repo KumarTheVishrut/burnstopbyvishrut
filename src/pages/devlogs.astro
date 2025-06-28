@@ -1,0 +1,295 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Layout from '../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+// Get all devlog entries
+const devlogEntries = await getCollection('devlogs');
+
+// Sort by filename (which corresponds to order)
+devlogEntries.sort((a, b) => a.id.localeCompare(b.id));
+
+// Helper function to get status emoji
+function getStatusEmoji(status: string) {
+  switch (status) {
+    case 'completed': return '✅';
+    case 'in-progress': return '🔄';
+    case 'planned': return '📋';
+    default: return '📋';
+  }
+}
+---
+
+<Layout title="Development Logs - BurnStop" description="Follow our journey building BurnStop - insights, challenges, and updates from the development team">
+  <Header />
+  
+  <main class="main-content">
+    <section class="section hero-section">
+      <div class="container">
+        <h1 class="section-title">Development Logs</h1>
+        <p class="section-subtitle">
+          Follow our journey building BurnStop - insights, challenges, and updates from the development team
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="devlogs-content">
+          
+          {devlogEntries.map(async (entry) => {
+            const { Content } = await entry.render();
+            const { data } = entry;
+            
+            return (
+              <div class="devlog-entry">
+                <h2>{data.title}</h2>
+                <div class="date-badge">{data.date}</div>
+                
+                <p>{data.description}</p>
+                
+                <div class="progress-section">
+                  <h3>Progress:</h3>
+                  <ul class="progress-list">
+                    {data.progress.map((item) => (
+                      <li class={item.status}>{item.task}</li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* Render any additional markdown content */}
+                <div class="devlog-content">
+                  <Content />
+                </div>
+              </div>
+            );
+          })}
+
+          <div class="cta-section">
+            <h2>Want to Contribute?</h2>
+            <p>Join our development journey! Check out our GitHub repository and contribute to making BurnStop even better.</p>
+            
+            <div class="cta-links">
+              <a href="https://github.com/KumarTheVishrut/burn-stop" target="_blank" class="cta-button primary">
+                <span>⭐</span>
+                View on GitHub
+              </a>
+              <a href="/integration-guide" class="cta-button secondary">
+                <span>🔗</span>
+                Integration Guide
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  .main-content {
+    padding-top: 72px;
+  }
+
+  .hero-section {
+    background: linear-gradient(135deg, rgba(249, 115, 22, 0.1) 0%, rgba(220, 38, 38, 0.1) 100%);
+    border-bottom: 1px solid #1f2937;
+  }
+
+  .devlogs-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .devlog-entry {
+    background: #111111;
+    border: 1px solid #1f2937;
+    border-radius: 20px;
+    padding: 40px;
+    margin-bottom: 32px;
+    transition: all 0.3s ease;
+  }
+
+  .devlog-entry:hover {
+    transform: translateY(-4px);
+    border-color: #f97316;
+    box-shadow: 0 12px 60px rgba(249, 115, 22, 0.15);
+  }
+
+  .devlog-entry h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .date-badge {
+    background: linear-gradient(135deg, #f97316 0%, #dc2626 100%);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-left: auto;
+  }
+
+  .devlog-entry p {
+    color: #d1d5db;
+    line-height: 1.6;
+    margin-bottom: 24px;
+    font-size: 16px;
+  }
+
+  .progress-section h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 16px;
+  }
+
+  .progress-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .progress-list li {
+    margin-bottom: 12px;
+    padding-left: 32px;
+    position: relative;
+    font-size: 15px;
+    color: #d1d5db;
+  }
+
+  .progress-list li::before {
+    position: absolute;
+    left: 0;
+    top: 2px;
+    font-weight: bold;
+    font-size: 16px;
+  }
+
+  .progress-list li.completed::before {
+    content: "✅";
+  }
+
+  .progress-list li.in-progress::before {
+    content: "🔄";
+  }
+
+  .progress-list li.planned::before {
+    content: "📋";
+  }
+
+  .devlog-content {
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid rgba(55, 65, 81, 0.3);
+    color: #d1d5db;
+    line-height: 1.6;
+  }
+
+  .devlog-content p {
+    margin-bottom: 16px;
+    font-size: 15px;
+  }
+
+  .cta-section {
+    background: rgba(249, 115, 22, 0.05);
+    border: 1px solid rgba(249, 115, 22, 0.2);
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+    margin-top: 48px;
+  }
+
+  .cta-section h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 16px;
+  }
+
+  .cta-section p {
+    color: #d1d5db;
+    line-height: 1.6;
+    margin-bottom: 32px;
+    font-size: 16px;
+  }
+
+  .cta-links {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .cta-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.3s ease;
+  }
+
+  .cta-button.primary {
+    background: linear-gradient(135deg, #f97316 0%, #dc2626 100%);
+    color: white;
+  }
+
+  .cta-button.primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(249, 115, 22, 0.4);
+  }
+
+  .cta-button.secondary {
+    background: rgba(249, 115, 22, 0.1);
+    border: 1px solid rgba(249, 115, 22, 0.3);
+    color: #f97316;
+  }
+
+  .cta-button.secondary:hover {
+    background: rgba(249, 115, 22, 0.2);
+    border-color: #f97316;
+    transform: translateY(-2px);
+  }
+
+  @media (max-width: 768px) {
+    .devlog-entry {
+      padding: 24px;
+    }
+
+    .devlog-entry h2 {
+      font-size: 24px;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .date-badge {
+      margin-left: 0;
+    }
+
+    .cta-links {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .cta-button {
+      width: 100%;
+      max-width: 280px;
+      justify-content: center;
+    }
+  }
+</style> 
