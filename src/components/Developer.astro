@@ -448,32 +448,235 @@
   }
 
   @media (max-width: 768px) {
+    .developer-section {
+      padding: 60px 0;
+      text-align: center;
+    }
+
+    .container {
+      padding: 0 20px;
+    }
+
     .developer-content {
       grid-template-columns: 1fr;
       gap: 48px;
+      margin-top: 48px;
+    }
+
+    .developer-profile {
+      order: 1;
+    }
+
+    .developer-skills {
+      order: 2;
+      text-align: center;
+    }
+
+    .profile-card {
+      padding: 28px;
+      border-radius: 20px;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    .profile-image img {
+      width: 100px;
+      height: 100px;
+    }
+
+    .profile-name {
+      font-size: 24px;
+    }
+
+    .profile-bio {
+      font-size: 14px;
     }
 
     .profile-links {
-      flex-direction: column;
+      flex-direction: row;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .profile-link {
+      flex: 1;
+      max-width: 100px;
+      padding: 8px 12px;
+      font-size: 12px;
+    }
+
+    .skills-section {
+      margin-bottom: 32px;
+      background: rgba(26, 26, 26, 0.5);
+      padding: 20px;
+      border-radius: 16px;
+      border: 1px solid #374151;
+    }
+
+    .skills-section h4 {
+      text-align: center;
+      margin-bottom: 20px;
     }
 
     .tech-stack {
       grid-template-columns: 1fr;
+      max-width: 300px;
+      margin: 0 auto;
+    }
+
+    .goals-list {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    .goal-item {
+      justify-content: flex-start;
+      text-align: left;
     }
 
     .stats-grid {
       grid-template-columns: repeat(2, 1fr);
+      max-width: 300px;
+      margin: 0 auto;
+    }
+
+    .project-vision {
+      margin-top: 48px;
+    }
+
+    .vision-card {
+      padding: 28px 20px;
+      border-radius: 16px;
+    }
+
+    .vision-card h3 {
+      font-size: 20px;
+    }
+
+    .vision-card > p {
+      font-size: 15px;
+      margin-bottom: 24px;
+    }
+
+    .quote-text {
+      font-size: 16px;
+    }
+
+    .collaboration-section {
+      margin-top: 48px;
+    }
+
+    .collaboration-section h3 {
+      font-size: 24px;
+    }
+
+    .collaboration-section p {
+      font-size: 16px;
+      margin-bottom: 24px;
     }
 
     .collaboration-actions {
       flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .collaboration-actions .btn {
+      width: 100%;
+      max-width: 280px;
+      justify-content: center;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .developer-section {
+      padding: 48px 0;
+    }
+
+    .container {
+      padding: 0 16px;
+    }
+
+    .developer-content {
+      margin-top: 32px;
+      gap: 32px;
+    }
+
+    .profile-card {
+      padding: 24px 16px;
+      border-radius: 16px;
+    }
+
+    .profile-image img {
+      width: 80px;
+      height: 80px;
+    }
+
+    .profile-name {
+      font-size: 20px;
+    }
+
+    .profile-title {
+      font-size: 14px;
+    }
+
+    .profile-bio {
+      font-size: 13px;
+    }
+
+    .profile-links {
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .profile-link {
+      max-width: 100%;
+      padding: 10px 16px;
+      font-size: 14px;
+    }
+
+    .skills-section {
+      padding: 16px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+
+    .skills-section h4 {
+      font-size: 16px;
+    }
+
+    .stats-grid {
+      grid-template-columns: 1fr;
+      max-width: 200px;
     }
 
     .vision-card {
-      padding: 24px;
+      padding: 20px 16px;
+    }
+
+    .vision-card h3 {
+      font-size: 18px;
+    }
+
+    .vision-card > p {
+      font-size: 14px;
     }
 
     .quote-text {
+      font-size: 15px;
+    }
+
+    .collaboration-section h3 {
+      font-size: 20px;
+    }
+
+    .collaboration-section p {
+      font-size: 15px;
+    }
+
+    .collaboration-actions .btn {
+      max-width: 100%;
+      padding: 14px 24px;
       font-size: 16px;
     }
   }

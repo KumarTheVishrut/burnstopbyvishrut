@@ -266,30 +266,132 @@ function getStatusEmoji(status: string) {
   }
 
   @media (max-width: 768px) {
+    .main-content {
+      padding-top: 72px;
+    }
+
+    .devlogs-content {
+      padding: 0 16px;
+    }
+
     .devlog-entry {
-      padding: 24px;
+      padding: 24px 20px;
+      border-radius: 16px;
+      margin-bottom: 24px;
     }
 
     .devlog-entry h2 {
-      font-size: 24px;
+      font-size: 22px;
       flex-direction: column;
       align-items: flex-start;
       gap: 12px;
+      line-height: 1.3;
     }
 
     .date-badge {
       margin-left: 0;
+      font-size: 13px;
+      padding: 6px 12px;
+    }
+
+    .devlog-entry p {
+      font-size: 15px;
+      margin-bottom: 20px;
+    }
+
+    .progress-section h3 {
+      font-size: 18px;
+      margin-bottom: 12px;
+    }
+
+    .progress-list li {
+      font-size: 14px;
+      margin-bottom: 10px;
+      padding-left: 28px;
+    }
+
+    .progress-list li::before {
+      font-size: 14px;
+    }
+
+    .devlog-content {
+      margin-top: 12px;
+      padding-top: 12px;
+    }
+
+    .devlog-content p {
+      font-size: 14px;
+    }
+
+    .cta-section {
+      padding: 24px 20px;
+      margin-top: 32px;
+    }
+
+    .cta-section h2 {
+      font-size: 24px;
+      margin-bottom: 12px;
+    }
+
+    .cta-section p {
+      font-size: 15px;
+      margin-bottom: 24px;
     }
 
     .cta-links {
       flex-direction: column;
       align-items: center;
+      gap: 12px;
     }
 
     .cta-button {
       width: 100%;
       max-width: 280px;
       justify-content: center;
+      padding: 14px 24px;
+      font-size: 16px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .devlogs-content {
+      padding: 0 12px;
+    }
+
+    .devlog-entry {
+      padding: 20px 16px;
+      border-radius: 12px;
+    }
+
+    .devlog-entry h2 {
+      font-size: 20px;
+    }
+
+    .devlog-entry p {
+      font-size: 14px;
+    }
+
+    .progress-section h3 {
+      font-size: 16px;
+    }
+
+    .progress-list li {
+      font-size: 13px;
+      padding-left: 24px;
+    }
+
+    .cta-section {
+      padding: 20px 16px;
+    }
+
+    .cta-section h2 {
+      font-size: 22px;
+    }
+
+    .cta-button {
+      max-width: 100%;
+      padding: 12px 20px;
+      font-size: 15px;
     }
   }
 </style> 

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Menu Test</title>
+    <style>
+        .mobile-test {
+            padding: 20px;
+            background: #0a0a0a;
+            color: white;
+            text-align: center;
+        }
+        
+        .test-button {
+            background: #f97316;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            .mobile-indicator {
+                display: block;
+                background: green;
+                padding: 10px;
+                margin: 10px 0;
+            }
+        }
+        
+        @media (min-width: 769px) {
+            .mobile-indicator {
+                display: block;
+                background: red;
+                padding: 10px;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="mobile-test">
+        <h1>Mobile Test</h1>
+        <div class="mobile-indicator">
+            Mobile breakpoint test
+        </div>
+        <p>Screen width: <span id="width"></span></p>
+        <button class="test-button" onclick="alert('Button works!')">Test Button</button>
+    </div>
+    
+    <script>
+        function updateWidth() {
+            document.getElementById('width').textContent = window.innerWidth + 'px';
+        }
+        
+        updateWidth();
+        window.addEventListener('resize', updateWidth);
+    </script>
+</body>
+</html> 

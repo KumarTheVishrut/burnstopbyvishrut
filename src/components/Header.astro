@@ -28,6 +28,14 @@
         </button>
       </div>
     </div>
+
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="/" class="nav-link">Home</a>
+      <a href="/devlogs" class="nav-link">Devlogs</a>
+      <a href="/integration-guide" class="nav-link">Integration Guide</a>
+      <a href="https://github.com/KumarTheVishrut/burn-stop" target="_blank" class="nav-link">GitHub</a>
+      <a href="#get-started" class="btn">Get Started</a>
+    </div>
   </nav>
 </header>
 
@@ -52,6 +60,7 @@
     align-items: center;
     justify-content: space-between;
     height: 72px;
+    position: relative;
   }
 
   .nav-brand {
@@ -97,27 +106,138 @@
     background: none;
     border: none;
     cursor: pointer;
-    padding: 8px;
+    padding: 12px;
+    border-radius: 8px;
+    transition: background-color 0.2s ease;
+    position: relative;
+    z-index: 1001;
+  }
+
+  .mobile-menu-btn:hover {
+    background: rgba(249, 115, 22, 0.1);
   }
 
   .mobile-menu-btn span {
+    display: block;
     width: 24px;
-    height: 2px;
-    background: #e5e7eb;
+    height: 3px;
+    background: #ffffff;
+    border-radius: 2px;
     transition: all 0.3s ease;
   }
 
+  .mobile-menu {
+    position: fixed;
+    top: 72px;
+    left: 0;
+    right: 0;
+    background: rgba(10, 10, 10, 0.98);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(55, 65, 81, 0.3);
+    padding: 24px;
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 999;
+  }
+
+  .mobile-menu.active {
+    display: flex;
+  }
+
+  .mobile-menu .nav-link {
+    padding: 12px 16px;
+    border-radius: 8px;
+    transition: background-color 0.2s ease;
+    display: block;
+    text-align: center;
+    font-size: 18px;
+  }
+
+  .mobile-menu .nav-link:hover {
+    background: rgba(249, 115, 22, 0.1);
+  }
+
+  .mobile-menu .btn {
+    margin-top: 16px;
+    text-align: center;
+    padding: 12px 24px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #f97316 0%, #dc2626 100%);
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .mobile-menu-btn.active span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+  }
+
+  .mobile-menu-btn.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .mobile-menu-btn.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+  }
+
   @media (max-width: 768px) {
+    .nav-content {
+      padding: 0 16px;
+    }
+
+    .nav-brand {
+      font-size: 20px;
+    }
+
+    .nav-logo {
+      font-size: 28px;
+    }
+
     .nav-menu {
-      display: none;
+      display: none !important;
     }
 
     .mobile-menu-btn {
-      display: flex;
+      display: flex !important;
+      position: absolute;
+      right: 16px;
+      top: 50%;
+      transform: translateY(-50%);
     }
 
-    .nav-actions .btn {
-      display: none;
+    .nav-actions {
+      display: none !important;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .nav-brand {
+      font-size: 18px;
+    }
+
+    .nav-logo {
+      font-size: 24px;
+    }
+
+    .mobile-menu-btn {
+      display: flex !important;
+      right: 12px;
+    }
+  }
+
+  /* Fallback for any screen smaller than 769px */
+  @media screen and (max-width: 769px) {
+    .mobile-menu-btn {
+      display: flex !important;
+    }
+    
+    .nav-menu {
+      display: none !important;
+    }
+    
+    .nav-actions {
+      display: none !important;
     }
   }
 </style>
@@ -125,10 +245,28 @@
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-    if (mobileMenuBtn) {
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    if (mobileMenuBtn && mobileMenu) {
       mobileMenuBtn.addEventListener('click', function() {
-        // Mobile menu functionality can be implemented here
-        console.log('Mobile menu clicked');
+        mobileMenuBtn.classList.toggle('active');
+        mobileMenu.classList.toggle('active');
+      });
+
+      // Close mobile menu when clicking on a link
+      mobileMenu.addEventListener('click', function(e) {
+        if (e.target.classList.contains('nav-link') || e.target.classList.contains('btn')) {
+          mobileMenuBtn.classList.remove('active');
+          mobileMenu.classList.remove('active');
+        }
+      });
+
+      // Close mobile menu when clicking outside
+      document.addEventListener('click', function(e) {
+        if (!mobileMenuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+          mobileMenuBtn.classList.remove('active');
+          mobileMenu.classList.remove('active');
+        }
       });
     }
   });

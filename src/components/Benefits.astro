@@ -351,26 +351,122 @@
   }
 
   @media (max-width: 768px) {
+    .benefits-section {
+      padding: 60px 0;
+      text-align: center;
+    }
+
+    .container {
+      padding: 0 20px;
+    }
+
     .benefits-content {
       grid-template-columns: 1fr;
       gap: 48px;
     }
 
-    .benefits-actions {
-      flex-direction: column;
+    .benefits-text {
+      text-align: center;
     }
 
-    .savings-card {
-      max-width: 350px;
+    .benefits-list {
+      margin: 40px 0;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .benefit-item {
       gap: 16px;
+      text-align: left;
+      padding: 16px;
+      background: rgba(26, 26, 26, 0.5);
+      border-radius: 12px;
+      margin-bottom: 16px;
+      border: 1px solid #374151;
     }
 
     .benefit-icon {
       width: 40px;
       height: 40px;
+    }
+
+    .benefit-title {
+      font-size: 18px;
+    }
+
+    .benefit-description {
+      font-size: 15px;
+    }
+
+    .benefits-actions {
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      margin-top: 32px;
+    }
+
+    .benefits-actions .btn {
+      width: 100%;
+      max-width: 280px;
+      justify-content: center;
+    }
+
+    .benefits-visual {
+      order: -1;
+    }
+
+    .savings-card {
+      max-width: 320px;
+      margin: 0 auto;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .benefits-section {
+      padding: 48px 0;
+    }
+
+    .container {
+      padding: 0 16px;
+    }
+
+    .benefits-content {
+      gap: 32px;
+    }
+
+    .benefits-list {
+      margin: 32px 0;
+    }
+
+    .benefit-item {
+      padding: 12px;
+      border-radius: 8px;
+    }
+
+    .benefit-icon {
+      width: 36px;
+      height: 36px;
+      font-size: 18px;
+    }
+
+    .benefit-title {
+      font-size: 16px;
+    }
+
+    .benefit-description {
+      font-size: 14px;
+    }
+
+    .benefits-actions .btn {
+      max-width: 100%;
+      padding: 14px 24px;
+      font-size: 16px;
+    }
+
+    .savings-card {
+      max-width: 280px;
+      padding: 24px;
     }
   }
 </style>

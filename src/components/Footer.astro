@@ -351,40 +351,139 @@
   }
 
   @media (max-width: 768px) {
+    .footer-content {
+      padding: 60px 0 30px;
+    }
+
     .footer-main {
       grid-template-columns: 1fr;
-      gap: 48px;
+      gap: 40px;
+      margin-bottom: 36px;
+    }
+
+    .footer-brand {
+      text-align: center;
+      max-width: 100%;
+    }
+
+    .brand-name {
+      font-size: 24px;
+    }
+
+    .brand-tagline {
+      font-size: 15px;
+      margin-bottom: 20px;
+    }
+
+    .footer-social {
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .social-link {
+      font-size: 13px;
+      padding: 6px 12px;
     }
 
     .footer-links {
       grid-template-columns: repeat(2, 1fr);
-      gap: 24px;
+      gap: 32px;
+    }
+
+    .link-title {
+      font-size: 15px;
+      margin-bottom: 12px;
+    }
+
+    .link-list a {
+      font-size: 13px;
     }
 
     .footer-stats {
       flex-wrap: wrap;
-      gap: 24px;
+      gap: 20px;
+      padding: 24px 0;
+      margin-bottom: 24px;
+    }
+
+    .stat-item {
+      gap: 8px;
+    }
+
+    .stat-icon {
+      font-size: 20px;
+    }
+
+    .stat-value {
+      font-size: 16px;
+    }
+
+    .stat-label {
+      font-size: 11px;
     }
 
     .footer-bottom {
       flex-direction: column;
-      gap: 24px;
+      gap: 20px;
       text-align: center;
+      padding-top: 24px;
     }
 
-    .footer-social {
-      flex-wrap: wrap;
+    .footer-legal {
+      font-size: 13px;
+    }
+
+    .tech-badge {
+      font-size: 13px;
+    }
+
+    .tech-icons span {
+      font-size: 18px;
     }
   }
 
   @media (max-width: 480px) {
+    .footer-content {
+      padding: 48px 0 24px;
+    }
+
+    .footer-main {
+      gap: 32px;
+    }
+
+    .brand-name {
+      font-size: 22px;
+    }
+
+    .brand-tagline {
+      font-size: 14px;
+    }
+
     .footer-links {
       grid-template-columns: 1fr;
+      gap: 28px;
     }
 
     .footer-stats {
       grid-template-columns: repeat(2, 1fr);
       gap: 16px;
+      padding: 20px 0;
+    }
+
+    .stat-item {
+      flex-direction: column;
+      text-align: center;
+      gap: 4px;
+    }
+
+    .footer-tech {
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .footer-legal {
+      font-size: 12px;
     }
   }
 </style>
